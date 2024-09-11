@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Plantas</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>Especies del patio de la FCF</h1>
+        <nav>
+            <input type="text" id="buscador" placeholder="Buscar especie...">
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+        <!-- Aquí agregaremos la lista de plantas -->
+        <div class="planta">
+            <h2>Especie: Peltophorum dubium
+            <p><strong>Reino:</strong> Plantae</p>
+            <p><strong>División:</strong> Spermatophyta</p>
+            <p><strong>Sub-división:</strong> Angiosperma</p>
+            <p><strong>Clase:</strong> Dicotiledónea</p>
+            <p><strong>Sub-clase:</strong> Arquiclamídea</p>
+            <p><strong>Grupo de orden:</strong> Corolianos</p>
+            <p><strong>Orden:</strong> Rosales</p>
+            <p><strong>Familia:</strong> Fabaceae</p>
+            <p><strong>Sub-familia:</strong> Cesalpinoidea</p>
+            <p><strong>Género:</strong> Peltophorum</p>
+            <p><strong>Distribución:</strong> Nativa. Se encuentra en países limítrofes; Sur de Brasil, Paraguay, noroeste de Uruguay y en Argentina se distribuye en las provincias fitogeográficas: Chaqueña y Selva Paranaense. 
+            <p><strong>Descripción de la especie:</strong> Árbol monoico inerme, de aproximadamente 10 mts de altura. Habitualmente con una copa alta, copa amplia de forma irregular o circular, pauci a densifoliada, fuste recto, circular, base y raíces tabulares. Corteza persistente con diseño del ritidoma que varía a través de los estadios de vida. En el estadio adulto presenta un estadio fisurado, con fisuras longitudinales y en algunos casos escamoso. Hojas compuestas, de filotaxis alterna con disposición helicoidal, bipinnadas de 10-35 cm de largo, con estipulas dendroides, con peciolo de 3-4 cm de longitud; 12-20 pares de foliolos, cada una contiene aproximadamente 15-25 pares de foliolulos oblongos, discoloros, brillantes en la fase superior y ferrugíneo-pulverulentos en el envés; base asimétrica y ápice mucronado. Inflorescencia en racimos reunidos en grandes panojas terminales que superan a las hojas. Flores cíclicas, zigomorfas, hermafroditas, amarillas; perianto compuesto de 5 sépalos libres, 5 pétalos libres de 2 cm de longitud, prefloración imbricada ascendente; androceo con 10 estambres libres pilosos, insertos. Gineceo súpero, unicarpelar, unilocular, con numerosos óvulos de placentación parietal, ovario pubescente, estigma grande, peltado. Fruto es una legumbre indehiscente de color castaño, samaroide, aliforme, de 3-8 cm de largo por 1-1,5 cm de ancho. Cada fruto contiene de 1 a 3 semillas castaño-claras, oblongas, de 5-8 mm de largo.
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Unión estudiantil</p>
+    </footer>
+    <script>
+        document.getElementById('buscador').addEventListener('input', function() {
+            let filtro = this.value.toLowerCase();
+            let plantas = document.getElementsByClassName('planta');
+    
+            for (let i = 0; i < plantas.length; i++) {
+                let nombre = plantas[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+                if (nombre.includes(filtro)) {
+                    plantas[i].style.display = '';
+                } else {
+                    plantas[i].style.display = 'none';
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>

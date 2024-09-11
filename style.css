@@ -1,0 +1,62 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #acf6bb;
+    color: #000000;
+    margin: 1;
+    padding: 1;
+    box-sizing: border-box;
+}
+
+/* Cabecera */
+header {
+    background-color: #ffffff;
+    color: rgb(0, 45, 2);
+    text-align: center;
+    padding: 5px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2 em;
+}
+
+/* Buscador */
+nav {
+    margin-top: 10px;
+}
+
+#buscador {
+    padding: 30px;
+    font-size: 1em;
+    width: 50%;
+}
+
+/* Sección principal */
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.planta {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: auto;
+    text-align: left;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #228B22;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
